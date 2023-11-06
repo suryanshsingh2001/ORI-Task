@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Header, Layout, SearchBar } from './Components';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Header, Layout, SearchBar } from "./Components";
 
 const App = () => {
   const [photos, setPhotos] = useState([]);
-  const APIKey = 'cc186057a3a48ee614f32e2e3393945c';
+  const APIKey = import.meta.env.VITE_REACT_APP_FLICKR_API_KEY;
   const fetchRecentPhotos = async () => {
     try {
       const response = await axios.get(
-        `https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=${APIKey}&safe_search=3&format=json&nojsoncallback=1`
+        `https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=${APIKey}&safe_search=1&format=json&nojsoncallback=1`
       );
-      console.log('Recent photos response:', response.data);
       setPhotos(response.data.photos.photo);
     } catch (error) {
-      console.error('Error fetching recent photos:', error);
+      console.error("Error fetching recent photos:", error);
     }
   };
 
@@ -26,10 +25,16 @@ const App = () => {
   };
 
   return (
-    <main>
+    <main className="bg-gradient-to-b from-white to-gray-100 h-screen">
       <Header />
-      <SearchBar onSearch={handleSearch} />
-      <Layout photos={photos} />
+      <div className="mx-auto max-w-screen-xl">
+        <div className="mt-8">
+          <SearchBar className="fixed" onSearch={handleSearch} />
+        </div>
+        <div className="mt-20">
+          <Layout photos={photos} />
+        </div>
+      </div>
     </main>
   );
 };
