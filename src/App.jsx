@@ -8,7 +8,7 @@ const App = () => {
   const fetchRecentPhotos = async () => {
     try {
       const response = await axios.get(
-        `https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=${APIKey}&safe_search=1&format=json&nojsoncallback=1`
+        `https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=${APIKey}&safe_search=3&format=json&nojsoncallback=1`
       );
       console.log('Recent photos response:', response.data);
       setPhotos(response.data.photos.photo);
