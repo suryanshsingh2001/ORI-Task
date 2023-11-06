@@ -3,22 +3,26 @@ import axios from 'axios';
 
 const SearchBar = ({ onSearch, suggestions }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const apiKey = 'cc186057a3a48ee614f32e2e3393945c'; // Add your Flickr API key here
+  const apiKey = 'cc186057a3a48ee614f32e2e3393945c';
 
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
   const handleSearch = async () => {
-    try {
-      console.log('Searching for:', searchTerm);
-      const response = await axios.get(
-        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&text=${searchTerm}&format=json&nojsoncallback=1`
-      );
-      console.log('Flickr API response:', response);
-      onSearch(response.data.photos.photo);
-    } catch (error) {
-      console.error('Error fetching photos:', error);
+    if (searchTerm) {
+      try {
+        console.log('Searching for:', searchTerm);
+        const response = await axios.get(
+          `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&text=${searchTerm}&format=json&nojsoncallback=1`
+        );
+        console.log('Flickr API response:', response);
+        onSearch(response.data.photos.photo);
+      } catch (error) {
+        console.error('Error fetching photos:', error);
+      }
+    } else {
+      onSearch([]);
     }
   };
 
@@ -41,11 +45,7 @@ const SearchBar = ({ onSearch, suggestions }) => {
           onChange={handleInputChange}
           placeholder="Search images..."
         />
-        <button
-          type="submit"
-          className="absolute right-0 top-0 mt-3 mr-4"
-          onClick={handleSearch}
-        >
+        <button type="submit" className="absolute right-0 top-0 mt-3 mr-4" onClick={handleSearch}>
           Search
         </button>
       </div>

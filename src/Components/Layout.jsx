@@ -16,10 +16,6 @@ const Layout = ({ photos }) => {
               alt={photo.title}
               className="w-full"
             />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2">{photo.title}</h3>
-              <p className="text-gray-700">{`Owner: ${photo.ownername}`}</p>
-            </div>
           </div>
         ))}
       </div>
