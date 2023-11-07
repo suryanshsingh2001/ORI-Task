@@ -9,7 +9,7 @@ PicEyes is an image search application that allows users to search for images us
 https://github.com/suryanshsingh2001/ORI-Task/assets/80690023/c8e4654a-2e23-49e6-98db-50cef40de9cc
 
 
-## Important Note
+## Important Note ⚠️
 I want to highlight that the Flickr API's `flickr.photos.getRecent` method currently lacks support for the `safe_search` parameter. This may lead to the display of potentially sensitive or explicit content. I have tried to mitigate this issue by using the `safe_search` parameter in the `flickr.photos.search` method, but this does not guarantee that all images will be safe for work.
 
 ## Task List
@@ -62,10 +62,10 @@ VITE_REACT_APP_FLICKR_API_KEY=your_api_key_here
 5. Open the application in your browser at `localhost:5173`
 
 -----------------
-Made by Suryansh Singh
+## About Me
+I'm Suryansh Singh, the developer behind this project.
 
-tashusingh2001@gmail.com
+Feel free to reach out to me at tashusingh2001@gmail.com for any queries or collaboration.
 
-[LinkedIn](https://www.linkedin.com/in/suryanshsingh2001/)
-
-[Portfolio](https://suryansh-portfolio.onrender.com/)
+## Connect with Me
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/suryanshsingh2001/) [![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Here-brightgreen)](https://suryansh-portfolio.onrender.com/)
