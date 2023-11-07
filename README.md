@@ -2,7 +2,11 @@
 
 PicEyes is an image search application that allows users to search for images using the Flickr API. Users can search for images, view suggestions, and see the search history, providing a user-friendly experience for browsing images.
 
-🔗[Live Link](https://ori-task.vercel.app/)
+🔗[Deployed Link](https://ori-task.vercel.app/)
+
+
+https://github.com/suryanshsingh2001/ORI-Task/assets/80690023/347ebcc2-eb17-4905-b046-3d513a57d8e6
+
 
 ## Task List
 
