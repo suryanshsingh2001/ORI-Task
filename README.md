@@ -5,7 +5,9 @@ PicEyes is an image search application that allows users to search for images us
 🔗[Deployed Link](https://ori-task.vercel.app/)
 
 
-https://github.com/suryanshsingh2001/ORI-Task/assets/80690023/347ebcc2-eb17-4905-b046-3d513a57d8e6
+
+https://github.com/suryanshsingh2001/ORI-Task/assets/80690023/c8e4654a-2e23-49e6-98db-50cef40de9cc
+
 
 
 ## Task List
