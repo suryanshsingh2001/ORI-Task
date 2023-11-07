@@ -9,6 +9,8 @@ PicEyes is an image search application that allows users to search for images us
 https://github.com/suryanshsingh2001/ORI-Task/assets/80690023/c8e4654a-2e23-49e6-98db-50cef40de9cc
 
 
+## Important Note
+I want to highlight that the Flickr API's `flickr.photos.getRecent` method currently lacks support for the `safe_search` parameter. This may lead to the display of potentially sensitive or explicit content. I have tried to mitigate this issue by using the `safe_search` parameter in the `flickr.photos.search` method, but this does not guarantee that all images will be safe for work.
 
 ## Task List
 
