@@ -1,24 +1,37 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 
+/**
+ * Layout component for displaying search results and a modal for selected photos.
+ * @param {Object[]} photos - An array of photos to display in the layout.
+ * @returns {JSX.Element} Layout component elements.
+ */
+
+
 const Layout = ({ photos }) => {
+
+  // State management for the modal
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
+
+  // Function to open the modal with the selected photo
   const openModal = (photo) => {
     setModalIsOpen(true);
     setSelectedPhoto(photo);
   };
 
+  // Function to close the modal
   const closeModal = () => {
     setModalIsOpen(false);
     setSelectedPhoto(null);
   };
 
+   // Check if photos are available to display
   if (!photos || photos.length === 0) {
     return <div>No photos to display</div>;
   }
-
+   // Return the layout component elements
   return (
     <div className="container mx-auto my-8">
       <h2 className="text-3xl font-semibold mb-8">Search Results</h2>
